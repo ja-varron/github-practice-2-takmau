@@ -1,0 +1,32 @@
+:root {
+    --teal-500: hsl(179, 62%, 43%);
+    --green-400: hsl(71, 73%, 54%);
+    --teal-100: hsl(204, 43%, 93%);
+    --gray-500: hsl(218, 22%, 67%);
+    --font-family: 'Karla', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: 16px;
+    background-color: #fff;
+    color: var(--gray-500);
+    line-height: 1.6;
+    padding: 2rem 1rem;
+}
+
+.why-us-container {
+    max-width: 700px;
+    margin: 0 auto;
+
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: rgb(0, 0, 0);
+}
