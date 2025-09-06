@@ -1,7 +1,5 @@
 :root {
     --teal-500: hsl(179, 62%, 43%);
-    --green-400: hsl(71, 73%, 54%);
-    --teal-100: hsl(204, 43%, 93%);
     --gray-500: hsl(218, 22%, 67%);
     --font-family: 'Karla', sans-serif;
 }
@@ -14,27 +12,27 @@
 
 body {
     font-family: var(--font-family);
-    font-size: 16px;
+    font-size: 14px;
     background-color: #fff;
     color: var(--gray-500);
-    line-height: 1.6;
-    padding: 2rem 1rem;
+    line-height: 1.4;
+    padding: 1rem;
 }
 
 .why-us-container {
-    max-width: 700px;
+    max-width: 480px;
     margin: 0 auto;
     background-color: var(--teal-500);
-    border-radius: 8px;
-    padding: 2rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: rgb(255, 255, 255);
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.08);
+    color: #fff;
 }
 
 .why-us-container h2 {
-    font-size: 2rem;
+    font-size: 1.4rem;
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .features-list {
@@ -43,13 +41,14 @@ body {
 }
 
 .features-list li {
-    margin-bottom: 1rem;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
 }
 
 footer {
     text-align: center;
-    margin-top: 2rem;
-    font-size: 0.9rem;
+    margin-top: 1.5rem;
+    font-size: 0.75rem;
     color: var(--gray-500);
 }
 
