@@ -1,0 +1,66 @@
+:root {
+    --teal-500: hsl(179, 62%, 43%);
+    --teal-400: hsl(179, 49%, 54%);
+    --gray-500: hsl(218, 22%, 67%);
+    --font-family: 'Karla', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: 15px;
+    background-color: #fff;
+    color: var(--gray-500);
+    line-height: 1.6;
+    padding: 1rem;
+}
+
+.why-us-container {
+    max-width: 500px;
+    margin: 10rem auto 0 auto;
+    background-color: var(--teal-400);
+    border-radius: 15px;
+    padding: 2rem 4rem;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    position: relative;
+    left: 200px;
+    min-height: 220px;
+}
+
+.why-us-container h2 {
+    font-size: 1.6rem;
+    text-align: left;
+    margin-bottom: 1.50rem;
+}
+
+.features-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.features-list li {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+footer {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.75rem;
+    color: var(--gray-500);
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    color: hsl(228, 45%, 64%);
+}
