@@ -45,3 +45,18 @@ body {
 .features-list li {
     margin-bottom: 1rem;
 }
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: var(--gray-500);
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.attribution a:hover {
+    color: hsl(228, 45%, 64%);
+}
