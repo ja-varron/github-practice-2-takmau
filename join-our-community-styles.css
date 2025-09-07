@@ -12,6 +12,9 @@
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* or whatever height your container already has */
   background-color: white;
   max-width: 600px;
   margin: 0 auto;
@@ -61,7 +64,8 @@
 }
 
 .top-section {
-  background: #fff;
+  flex: 1;
+  background: white;
   padding: 2rem;
   min-height: var(--card-section-height);
 }
@@ -132,6 +136,8 @@
   border-left: 1px solid rgba(255, 255, 255, 0.06);
 }
 
+
+/* Responsive: stack on small screens */
 @media (max-width: 720px) {
   .card {
     margin: 1rem 0.75rem;
