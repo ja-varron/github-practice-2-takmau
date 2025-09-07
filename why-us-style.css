@@ -48,7 +48,8 @@ body {
 
 footer {
     text-align: center;
-    margin-top: 1.5rem;
+    margin-top: 0;
+    /* moved up further to fit */
     font-size: 0.75rem;
     color: var(--gray-500);
 }
