@@ -47,6 +47,18 @@
   overflow: hidden;
   /* keep corners neat when children have backgrounds */
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  /* subtle outline */
+}
+
+/* When an element has both .container and .card make card properties win */
+.container.card {
+  max-width: 820px;
+  padding: 0;
+  /* card children control padding */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .top-section {
@@ -58,6 +70,14 @@
   display: flex;
   gap: 0;
   /* no gap: sections should touch */
+}
+
+/* keep bottom columns aligned visually (same min-height) */
+.card-bottom>.subscription-box,
+.card-bottom>.why-us-container {
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
 }
 
 /* bottom left subscription area */
