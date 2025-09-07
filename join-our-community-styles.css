@@ -14,7 +14,8 @@
 .container {
   display: flex;
   flex-direction: column;
-  height: 100%; /* or whatever height your container already has */
+  height: 100%;
+  /* or whatever height your container already has */
   background-color: white;
   max-width: 600px;
   margin: 0 auto;
