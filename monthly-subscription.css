@@ -1,10 +1,10 @@
-
 .subscription-box {
   background-color: hsl(179, 62%, 43%);
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 0;
+  /* handled by parent card */
   width: 100%;
-  max-width: 300px;
+  max-width: none;
 }
 
 .subscription-box h2 {
@@ -14,7 +14,7 @@
 
 .subscription-box p {
   color: hsl(204, 43%, 93%);
-  font-size: lem;
+  font-size: 0.95rem;
   line-height: 1.6;
   margin: 8px 0;
 }
