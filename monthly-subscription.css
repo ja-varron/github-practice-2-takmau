@@ -30,8 +30,8 @@
 }
 
 .signup-btn:hover {
-  background-color: #218838; /* slightly darker green */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* subtle shadow */
-  transform: scale(1.03); /* gentle zoom effect */
+  background-color: #07c931; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  transform: scale(1.03); 
   transition: all 0.2s ease-in-out;
 }
