@@ -1,0 +1,40 @@
+.bg {
+background: hsl(218, 22%, 67%);
+}
+
+.join-our-community {
+  background: hsl(0, 0%, 100%);
+  color: rgb(123, 57, 57);
+  text-align: center;
+  padding: 3rem 1rem;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+.container {
+  background-color: white;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 5px 5px 5px 5px;
+}
+
+.text-content {
+  font-family: 'Karla', sans-serif;
+}
+
+#join-our-community {
+  color: hsl(179, 62%, 43%);
+  /* font-size: 2rem; */
+  margin-bottom: 1rem;
+}
+
+#money-back-guarantee {
+  color: hsl(71, 73%, 54%);
+  margin-bottom: 1rem;
+}
+
+.description p {
+  color: hsl(218, 22%, 67%);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+

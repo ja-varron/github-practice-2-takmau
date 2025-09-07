@@ -1,0 +1,30 @@
+
+.subscription-box {
+  background-color: hsl(179, 62%, 43%);
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.subscription-box h2 {
+  color: hsl(204, 43%, 93%);
+  font-size: 1.5em;
+}
+
+.subscription-box p {
+  color: hsl(204, 43%, 93%);
+  font-size: lem;
+  line-height: 1.6;
+  margin: 8px 0;
+}
+
+.signup-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  cursor: pointer;
+  border-radius: 4px;
+}
