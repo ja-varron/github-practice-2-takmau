@@ -14,23 +14,20 @@
 body {
     font-family: var(--font-family);
     font-size: 15px;
-    background-color: #fff;
+    /* leave page background and padding to global stylesheet */
     color: var(--gray-500);
     line-height: 1.6;
-    padding: 1rem;
 }
 
 .why-us-container {
-    max-width: 500px;
-    margin: 10rem auto 0 auto;
+    /* sizing and placement are controlled by the card layout in styles.css */
     background-color: var(--teal-400);
-    border-radius: 15px;
-    padding: 2rem 4rem;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+    /* corners handled by .card */
+    padding: 0;
+    /* padding handled by styles.css for the merged card */
     color: #fff;
-    position: relative;
-    left: 200px;
-    min-height: 220px;
+    min-height: auto;
 }
 
 .why-us-container h2 {
