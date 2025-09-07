@@ -1,4 +1,7 @@
 :root {
+    --teal-500: hsl(179, 62%, 43%);
+    --teal-400: hsl(179, 49%, 54%);
+    --gray-500: hsl(218, 22%, 67%);
     --font-family: 'Karla', sans-serif;
 }
 
@@ -12,18 +15,18 @@ body {
     font-family: var(--font-family);
     font-size: 15px;
     /* leave page background and padding to global stylesheet */
-    color: var(--muted-text);
+    color: var(--gray-500);
     line-height: 1.6;
 }
 
 .why-us-container {
     /* sizing and placement are controlled by the card layout in styles.css */
-    background-color: var(--accent-foreground);
+    background-color: var(--teal-400);
     border-radius: 0;
     /* corners handled by .card */
     padding: 0;
     /* padding handled by styles.css for the merged card */
-    color: var(--text);
+    color: #fff;
     min-height: auto;
 }
 
@@ -48,14 +51,14 @@ footer {
     margin-top: 0;
     /* moved up further to fit */
     font-size: 0.75rem;
-    color: var(--muted-text);
+    color: var(--gray-500);
 }
 
 .attribution a {
-    color: var(--link);
+    color: hsl(228, 45%, 44%);
     text-decoration: none;
 }
 
 .attribution a:hover {
-    color: color-mix(in srgb, var(--link) 70%, var(--accent-foreground));
+    color: hsl(228, 45%, 64%);
 }

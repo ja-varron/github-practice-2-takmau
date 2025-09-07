@@ -13,6 +13,8 @@
     --text: #0f1721;
     --muted-text: #475569;
     --accent: #0ea5e9;
+    --cta: #ff7a59;
+    /* call-to-action button color (light) */
     /* sky-500 */
     --accent-foreground: #ffffff;
     --border: #e6edf3;
@@ -34,6 +36,8 @@
     --text: #e6eef6;
     --muted-text: #94a3b8;
     --accent: #60a5fa;
+    --cta: #f97316;
+    /* CTA for dark mode (orange) */
     /* blue-400 */
     --accent-foreground: #0b1220;
     --border: rgba(255, 255, 255, 0.06);
@@ -43,6 +47,9 @@
     --danger: #f97316;
 
     --glass-bg: rgba(10, 12, 18, 0.6);
+    /* aside / accent strip used by side panels (dark-mode) */
+    --aside: rgb(179, 184, 241);
+    /* user-requested light blue for Why Us accent */
 }
 
 /* Respect system preference by default (applies to :root when no explicit data-theme/class set) */
@@ -127,6 +134,54 @@ button,
     font-weight: 600;
 }
 
+/* Theme icon (inline SVG) styling and animation */
+#themeIcon {
+    display: block;
+    transition: transform 260ms ease, opacity 220ms ease;
+    color: var(--text);
+    fill: currentColor;
+}
+
+#themeIcon .icon-sun circle {
+    fill: currentColor;
+}
+
+#themeIcon .icon-sun .rays line {
+    stroke: currentColor;
+    stroke-width: 1.2;
+    stroke-linecap: round;
+}
+
+#themeIcon .icon-moon path {
+    fill: currentColor;
+}
+
+/* Default: light mode shows sun, hide moon slightly */
+:root:not([data-theme='dark']):not(.theme-dark) #themeIcon .icon-moon {
+    opacity: 0;
+    transform: scale(0.7) translateX(6px);
+}
+
+/* Dark mode: show moon, make sun fade/scale */
+:root[data-theme='dark'] #themeIcon .icon-moon,
+:root.theme-dark #themeIcon .icon-moon,
+.theme-dark #themeIcon .icon-moon {
+    opacity: 1;
+    transform: scale(1) translateX(0);
+}
+
+:root[data-theme='dark'] #themeIcon .icon-sun,
+:root.theme-dark #themeIcon .icon-sun,
+.theme-dark #themeIcon .icon-sun {
+    opacity: 0.25;
+    transform: scale(0.8);
+}
+
+/* small hover/active affordance */
+.theme-toggle:hover #themeIcon {
+    transform: rotate(10deg) scale(1.05);
+}
+
 /* Smooth transitions (respect reduce-motion preference) */
 :root {
     --theme-transition: background-color 220ms ease, color 220ms ease, border-color 220ms ease, box-shadow 220ms ease, fill 220ms ease;
@@ -177,3 +232,178 @@ button,
 
 	4) If you prefer using classes on body, replace document.documentElement.setAttribute calls with document.body.classList.
 */
+
+/* Dark-mode-only component overrides
+         These rules intentionally override component styles only when the root has data-theme="dark" or .theme-dark
+         so the light-mode CSS files remain untouched. */
+:root[data-theme='dark'] .subscription-box,
+:root.theme-dark .subscription-box,
+.theme-dark .subscription-box {
+    background-color: var(--accent) !important;
+    color: var(--accent-foreground) !important;
+}
+
+:root[data-theme='dark'] .why-us-container,
+:root.theme-dark .why-us-container,
+.theme-dark .why-us-container {
+    background-color: var(--surface) !important;
+    color: var(--text) !important;
+}
+
+:root[data-theme='dark'] .card,
+:root.theme-dark .card,
+.theme-dark .card {
+    background-color: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    box-shadow: 0 8px 24px var(--shadow) !important;
+}
+
+:root[data-theme='dark'] .signup-btn,
+:root.theme-dark .signup-btn,
+.theme-dark .signup-btn {
+    background-color: var(--cta) !important;
+    color: var(--accent-foreground) !important;
+}
+
+/* -- Comprehensive dark-only color overrides (non-invasive) --
+     These rules change only colors (background, text, borders, shadows) when dark mode is active.
+     They intentionally avoid modifying layout, sizing, spacing, or structure.
+*/
+
+/* Ensure the page background and base text color in dark mode */
+:root[data-theme='dark'],
+:root.theme-dark,
+.theme-dark {
+    background-color: var(--bg) !important;
+    color: var(--text) !important;
+}
+
+/* body and root-level containers */
+:root[data-theme='dark'] body,
+:root.theme-dark body,
+.theme-dark body {
+    background-color: var(--bg) !important;
+    color: var(--text) !important;
+}
+
+/* Main content containers (preserve layout) */
+:root[data-theme='dark'] .container,
+:root.theme-dark .container,
+.theme-dark .container,
+:root[data-theme='dark'] .container.card,
+:root.theme-dark .container.card,
+.theme-dark .container.card {
+    background-color: var(--surface) !important;
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    box-shadow: 0 8px 24px var(--shadow) !important;
+}
+
+/* Card sections and surfaces */
+:root[data-theme='dark'] .top-section,
+:root.theme-dark .top-section,
+.theme-dark .top-section,
+:root[data-theme='dark'] .card-bottom,
+:root.theme-dark .card-bottom,
+.theme-dark .card-bottom {
+    background: var(--surface) !important;
+    color: var(--text) !important;
+}
+
+/* Subscription and side boxes (color-only) */
+:root[data-theme='dark'] .subscription-box,
+:root.theme-dark .subscription-box,
+.theme-dark .subscription-box {
+    background-color: var(--accent) !important;
+    color: var(--accent-foreground) !important;
+    border-color: transparent !important;
+}
+
+:root[data-theme='dark'] .why-us-container,
+:root.theme-dark .why-us-container,
+.theme-dark .why-us-container {
+    background-color: var(--muted-surface) !important;
+    color: var(--text) !important;
+    border-left-color: var(--border) !important;
+}
+
+/* If the 'left accent bar' is rendered as a pseudo-element or inner element,
+   force it to use --aside so it differs from the subscription box in dark mode. */
+:root[data-theme='dark'] .why-us-container::before,
+:root.theme-dark .why-us-container::before,
+.theme-dark .why-us-container::before,
+:root[data-theme='dark'] .why-us-container .accent-strip,
+:root.theme-dark .why-us-container .accent-strip,
+.theme-dark .why-us-container .accent-strip {
+    background-color: var(--aside) !important;
+    border-color: var(--aside) !important;
+}
+
+/* Headings, paragraphs, lists: color-only */
+:root[data-theme='dark'] h1,
+:root[data-theme='dark'] h2,
+:root[data-theme='dark'] h3,
+:root[data-theme='dark'] h4,
+:root[data-theme='dark'] h5,
+:root[data-theme='dark'] h6,
+:root[data-theme='dark'] p,
+:root[data-theme='dark'] li,
+:root[data-theme='dark'] span,
+:root.theme-dark h1,
+:root.theme-dark h2,
+:root.theme-dark h3,
+:root.theme-dark h4,
+:root.theme-dark h5,
+:root.theme-dark h6,
+.theme-dark h1,
+.theme-dark h2,
+.theme-dark h3,
+.theme-dark h4,
+.theme-dark h5,
+.theme-dark h6 {
+    color: var(--text) !important;
+}
+
+/* Muted/descriptive text */
+:root[data-theme='dark'] .description p,
+:root.theme-dark .description p,
+.theme-dark .description p,
+:root[data-theme='dark'] .muted,
+:root.theme-dark .muted,
+.theme-dark .muted {
+    color: var(--muted-text) !important;
+}
+
+/* Links and inline controls */
+:root[data-theme='dark'] a,
+:root.theme-dark a,
+.theme-dark a {
+    color: var(--link) !important;
+}
+
+/* Buttons: preserve sizing, change color only
+   Keep .signup-btn separate so it can use --cta while other buttons use --accent */
+:root[data-theme='dark'] button:not(.signup-btn),
+:root.theme-dark button:not(.signup-btn),
+.theme-dark button:not(.signup-btn) {
+    background-color: var(--accent) !important;
+    color: var(--accent-foreground) !important;
+    border-color: transparent !important;
+}
+
+/* Borders and dividers */
+:root[data-theme='dark'] .bordered,
+:root.theme-dark .bordered,
+.theme-dark .bordered,
+:root[data-theme='dark'] .card,
+:root.theme-dark .card,
+.theme-dark .card {
+    border-color: var(--border) !important;
+}
+
+/* Footer/small text */
+:root[data-theme='dark'] footer,
+:root.theme-dark footer,
+.theme-dark footer {
+    color: var(--muted-text) !important;
+}

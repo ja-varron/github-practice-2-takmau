@@ -1,11 +1,11 @@
 /* Cleaned and consolidated styles for the merged card */
 .bg {
-  background: var(--bg);
+  background: hsl(0, 0%, 100%);
 }
 
 .join-our-community {
-  background: var(--surface);
-  color: var(--text);
+  background: hsl(0, 0%, 100%);
+  color: rgb(123, 57, 57);
   text-align: center;
   padding: 3rem 1rem;
   font-family: 'Red Hat Display', sans-serif;
@@ -16,7 +16,7 @@
   flex-direction: column;
   height: 100%;
   /* or whatever height your container already has */
-  background-color: var(--surface);
+  background-color: rgb(255, 255, 255);
   max-width: 600px;
   margin: 0 auto;
   padding: 5px;
@@ -27,17 +27,17 @@
 }
 
 #join-our-community {
-  color: var(--accent);
+  color: hsl(179, 62%, 43%);
   margin-bottom: 1rem;
 }
 
 #money-back-guarantee {
-  color: var(--accent-foreground);
+  color: hsl(71, 73%, 54%);
   margin-bottom: 1rem;
 }
 
 .description p {
-  color: var(--muted-text);
+  color: hsl(218, 22%, 67%);
   line-height: 1.5;
   margin-bottom: 1rem;
 }
@@ -48,8 +48,9 @@
   margin: 2rem auto 2.5rem auto;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 8px 24px var(--shadow);
-  border: 1px solid var(--border);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  /* updated edge effect */
+  border: 1px solid rgba(0, 0, 0, 0.06);
   /* updated edge effect */
   --card-section-height: 220px;
 }
@@ -65,7 +66,7 @@
 
 .top-section {
   flex: 1;
-  background: var(--surface);
+  background: white;
   padding: 2rem;
   min-height: var(--card-section-height);
 }
@@ -84,8 +85,8 @@
 
 .subscription-box {
   flex: 1 1 50%;
-  background-color: var(--accent);
-  color: var(--accent-foreground);
+  background-color: hsl(179, 62%, 43%);
+  color: hsl(204, 43%, 93%);
   padding: 2rem;
 }
 
@@ -101,7 +102,7 @@
 
 .subscription-box .per-month {
   font-size: 0.9rem;
-  color: var(--accent-foreground);
+  color: rgba(255, 255, 255, 0.95);
 }
 
 .subscription-box .small {
@@ -110,8 +111,8 @@
 
 /* Sign-up button with hover effect */
 .signup-btn {
-  background-color: var(--success);
-  color: var(--accent-foreground);
+  background-color: #c7ea3f;
+  color: #ffffff;
   font-size: 1.1rem;
   border: none;
   padding: 14px 28px;
@@ -119,21 +120,21 @@
   cursor: pointer;
   border-radius: 10px;
   box-shadow: 0 8px 0 rgba(0, 0, 0, 0.10);
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: filter 0.2s ease, transform 0.2s ease;
 }
 
 .signup-btn:hover {
-  filter: brightness(0.95);
+  filter: brightness(0.92);
   transform: translateY(-2px);
 }
 
 .why-us-container {
   flex: 1 1 50%;
-  background-color: var(--accent-foreground);
-  color: var(--text);
+  background-color: hsl(179, 49%, 54%);
+  color: #fff;
   padding: 2rem;
   margin: 0;
-  border-left: 1px solid var(--border);
+  border-left: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 

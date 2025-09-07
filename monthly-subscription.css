@@ -1,5 +1,5 @@
 .subscription-box {
-  background-color: var(--accent);
+  background-color: hsl(179, 62%, 43%);
   padding: 20px;
   border-radius: 0;
   /* handled by parent card */
@@ -8,20 +8,20 @@
 }
 
 .subscription-box h2 {
-  color: var(--accent-foreground);
+  color: hsl(204, 43%, 93%);
   font-size: 1.5em;
 }
 
 .subscription-box p {
-  color: var(--accent-foreground);
+  color: hsl(204, 43%, 93%);
   font-size: 0.95rem;
   line-height: 1.6;
   margin: 8px 0;
 }
 
 .signup-btn {
-  background-color: var(--success);
-  color: var(--accent-foreground);
+  background-color: #28a745;
+  color: white;
   border: none;
   padding: 10px 20px;
   margin-top: 15px;
@@ -30,8 +30,8 @@
 }
 
 .signup-btn:hover {
-  filter: brightness(0.95);
+  background-color: #07c931;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transform: translateY(-2px);
-  transition: all 0.15s ease-in-out;
+  transform: scale(1.03);
+  transition: all 0.2s ease-in-out;
 }
