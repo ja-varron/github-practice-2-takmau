@@ -1,3 +1,4 @@
+
 .bg {
   background: hsl(218, 22%, 67%);
 }
@@ -11,10 +12,9 @@
 }
 
 .container {
-  background-color: white;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 5px 5px 5px 5px;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* or whatever height your container already has */
 }
 
 .text-content {
@@ -62,8 +62,9 @@
 }
 
 .top-section {
-  background: #fff;
-  padding: 2.25rem 2.5rem;
+  flex: 1;
+  background: white;
+  padding: 2rem;
 }
 
 .card-bottom {
@@ -130,6 +131,8 @@
   /* reset any prior margin */
   border-left: 1px solid rgba(255, 255, 255, 0.05);
 }
+
+
 
 /* Responsive: stack on small screens */
 @media (max-width: 720px) {
