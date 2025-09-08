@@ -1,0 +1,37 @@
+.subscription-box {
+  background-color: hsl(179, 62%, 43%);
+  padding: 20px;
+  border-radius: 0;
+  /* handled by parent card */
+  width: 100%;
+  max-width: none;
+}
+
+.subscription-box h2 {
+  color: hsl(204, 43%, 93%);
+  font-size: 1.5em;
+}
+
+.subscription-box p {
+  color: hsl(204, 43%, 93%);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 8px 0;
+}
+
+.signup-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.signup-btn:hover {
+  background-color: #07c931;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.03);
+  transition: all 0.2s ease-in-out;
+}
